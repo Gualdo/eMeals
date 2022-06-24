@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		2D2EA8EB2863850600A167BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EA8EA2863850600A167BA /* AppDelegate.m */; };
 		2D2EA8EE2863850600A167BA /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EA8ED2863850600A167BA /* SceneDelegate.m */; };
-		2D2EA8F12863850600A167BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EA8F02863850600A167BA /* ViewController.m */; };
 		2D2EA8F42863850600A167BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D2EA8F22863850600A167BA /* Main.storyboard */; };
 		2D2EA8F72863850600A167BA /* eMeals.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EA8F52863850600A167BA /* eMeals.xcdatamodeld */; };
 		2D2EA8F92863850800A167BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D2EA8F82863850800A167BA /* Assets.xcassets */; };
 		2D2EA8FC2863850800A167BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D2EA8FA2863850800A167BA /* LaunchScreen.storyboard */; };
 		2D2EA8FF2863850800A167BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EA8FE2863850800A167BA /* main.m */; };
+		2D2F206C2863894000B95A58 /* MealsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F206B2863894000B95A58 /* MealsCollectionViewController.m */; };
+		2D2F20772863C32A00B95A58 /* MealCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F20762863C32A00B95A58 /* MealCollectionCell.m */; };
+		2D586FED2864F23000F09794 /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D586FEC2864F23000F09794 /* Meal.m */; };
+		2DD4C7092864CD84001FD09F /* ImageStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4C7082864CD84001FD09F /* ImageStorageManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,14 +26,20 @@
 		2D2EA8EA2863850600A167BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2D2EA8EC2863850600A167BA /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		2D2EA8ED2863850600A167BA /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		2D2EA8EF2863850600A167BA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2D2EA8F02863850600A167BA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2D2EA8F32863850600A167BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D2EA8F62863850600A167BA /* eMeals.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = eMeals.xcdatamodel; sourceTree = "<group>"; };
 		2D2EA8F82863850800A167BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D2EA8FB2863850800A167BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D2EA8FD2863850800A167BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D2EA8FE2863850800A167BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D2F206A2863894000B95A58 /* MealsCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealsCollectionViewController.h; sourceTree = "<group>"; };
+		2D2F206B2863894000B95A58 /* MealsCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealsCollectionViewController.m; sourceTree = "<group>"; };
+		2D2F20752863C32A00B95A58 /* MealCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealCollectionCell.h; sourceTree = "<group>"; };
+		2D2F20762863C32A00B95A58 /* MealCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealCollectionCell.m; sourceTree = "<group>"; };
+		2D586FEB2864F23000F09794 /* Meal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
+		2D586FEC2864F23000F09794 /* Meal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Meal.m; sourceTree = "<group>"; };
+		2DD4C7082864CD84001FD09F /* ImageStorageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageStorageManager.m; sourceTree = "<group>"; };
+		2DD4C70A2864CD9E001FD09F /* ImageStorageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageStorageManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +72,11 @@
 		2D2EA8E82863850600A167BA /* eMeals */ = {
 			isa = PBXGroup;
 			children = (
-				2D2EA8E92863850600A167BA /* AppDelegate.h */,
-				2D2EA8EA2863850600A167BA /* AppDelegate.m */,
-				2D2EA8EC2863850600A167BA /* SceneDelegate.h */,
-				2D2EA8ED2863850600A167BA /* SceneDelegate.m */,
-				2D2EA8EF2863850600A167BA /* ViewController.h */,
-				2D2EA8F02863850600A167BA /* ViewController.m */,
+				2D2F206F2863C2BC00B95A58 /* AppLifeCycle */,
+				2DD4C7072864CCAE001FD09F /* Helpers */,
+				2D2F207A2863C37300B95A58 /* MealsCollectionView */,
+				2D586FEA2864EF3E00F09794 /* Models */,
+				2D2F20782863C34100B95A58 /* Views */,
 				2D2EA8F22863850600A167BA /* Main.storyboard */,
 				2D2EA8F82863850800A167BA /* Assets.xcassets */,
 				2D2EA8FA2863850800A167BA /* LaunchScreen.storyboard */,
@@ -77,6 +85,61 @@
 				2D2EA8F52863850600A167BA /* eMeals.xcdatamodeld */,
 			);
 			path = eMeals;
+			sourceTree = "<group>";
+		};
+		2D2F206F2863C2BC00B95A58 /* AppLifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				2D2EA8E92863850600A167BA /* AppDelegate.h */,
+				2D2EA8EA2863850600A167BA /* AppDelegate.m */,
+				2D2EA8EC2863850600A167BA /* SceneDelegate.h */,
+				2D2EA8ED2863850600A167BA /* SceneDelegate.m */,
+			);
+			path = AppLifeCycle;
+			sourceTree = "<group>";
+		};
+		2D2F20782863C34100B95A58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2D2F20792863C35500B95A58 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2D2F20752863C32A00B95A58 /* MealCollectionCell.h */,
+				2D2F20762863C32A00B95A58 /* MealCollectionCell.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2D2F207A2863C37300B95A58 /* MealsCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				2D2F20792863C35500B95A58 /* Components */,
+				2D2F206A2863894000B95A58 /* MealsCollectionViewController.h */,
+				2D2F206B2863894000B95A58 /* MealsCollectionViewController.m */,
+			);
+			path = MealsCollectionView;
+			sourceTree = "<group>";
+		};
+		2D586FEA2864EF3E00F09794 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D586FEB2864F23000F09794 /* Meal.h */,
+				2D586FEC2864F23000F09794 /* Meal.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2DD4C7072864CCAE001FD09F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2DD4C7082864CD84001FD09F /* ImageStorageManager.m */,
+				2DD4C70A2864CD9E001FD09F /* ImageStorageManager.h */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +212,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D586FED2864F23000F09794 /* Meal.m in Sources */,
+				2DD4C7092864CD84001FD09F /* ImageStorageManager.m in Sources */,
+				2D2F20772863C32A00B95A58 /* MealCollectionCell.m in Sources */,
 				2D2EA8FF2863850800A167BA /* main.m in Sources */,
-				2D2EA8F12863850600A167BA /* ViewController.m in Sources */,
+				2D2F206C2863894000B95A58 /* MealsCollectionViewController.m in Sources */,
 				2D2EA8EB2863850600A167BA /* AppDelegate.m in Sources */,
 				2D2EA8F72863850600A167BA /* eMeals.xcdatamodeld in Sources */,
 				2D2EA8EE2863850600A167BA /* SceneDelegate.m in Sources */,
@@ -304,8 +370,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,8 +399,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
