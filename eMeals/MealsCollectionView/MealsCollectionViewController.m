@@ -32,6 +32,11 @@ static NSString * const reuseIdentifier = @"Cell";
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.collectionView reloadData];
+}
+
 - (void)setupView {
     self.meals = [[NSMutableArray alloc] init];
     self.serviceCounter = 0;
@@ -178,7 +183,8 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     MealDetailViewController * vC = [self.storyboard instantiateViewControllerWithIdentifier:@"detailViewController"];
-    vC.meal = self.meals[indexPath.row];
+    vC.meals = self.meals;
+    vC.index = @(indexPath.row);
     [self.navigationController pushViewController:vC animated:YES];
 }
 

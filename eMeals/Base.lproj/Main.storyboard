@@ -130,7 +130,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpo-yP-X1g">
-                                <rect key="frame" x="324" y="282" width="50" height="50"/>
+                                <rect key="frame" x="324" y="271.33333333333331" width="50" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Cpo-yP-X1g" secondAttribute="height" multiplier="1:1" id="NYO-T6-3W1"/>
@@ -142,32 +142,46 @@
                                 <buttonConfiguration key="configuration" style="plain" image="pencil.circle.fill" catalog="system">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="editButtonTapped:" destination="cgv-1D-jbH" eventType="touchUpInside" id="eDI-ar-45l"/>
+                                </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aQd-iT-OCc">
-                                <rect key="frame" x="16" y="369.33333333333326" width="358" height="440.66666666666674"/>
-                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oHu-XV-hwQ">
+                                <rect key="frame" x="0.0" y="353.33333333333326" width="390" height="456.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="PJA-cU-72d">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PJA-cU-72d" id="EyO-ac-Vpb">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Xe-Uy-OYM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aQd-iT-OCc" firstAttribute="leading" secondItem="0Xe-Uy-OYM" secondAttribute="leading" constant="16" id="5Iw-w6-8uS"/>
-                            <constraint firstItem="0Xe-Uy-OYM" firstAttribute="bottom" secondItem="aQd-iT-OCc" secondAttribute="bottom" id="9tt-qf-YzF"/>
+                            <constraint firstItem="0Xe-Uy-OYM" firstAttribute="bottom" secondItem="oHu-XV-hwQ" secondAttribute="bottom" id="BRf-cd-wT6"/>
                             <constraint firstItem="Cpo-yP-X1g" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zqN-fH-cbc" secondAttribute="trailing" constant="16" id="HP4-6Y-B55"/>
-                            <constraint firstItem="aQd-iT-OCc" firstAttribute="top" secondItem="gds-gW-B5o" secondAttribute="bottom" constant="32" id="HZG-Nw-htd"/>
                             <constraint firstItem="gds-gW-B5o" firstAttribute="bottom" secondItem="zqN-fH-cbc" secondAttribute="bottom" constant="16" id="LUT-V1-GIK"/>
                             <constraint firstItem="zqN-fH-cbc" firstAttribute="leading" secondItem="gds-gW-B5o" secondAttribute="leading" constant="16" id="NO2-Tq-Sdl"/>
-                            <constraint firstItem="Cpo-yP-X1g" firstAttribute="centerY" secondItem="zqN-fH-cbc" secondAttribute="centerY" id="PyC-OG-60H"/>
                             <constraint firstItem="gds-gW-B5o" firstAttribute="trailing" secondItem="Cpo-yP-X1g" secondAttribute="trailing" constant="16" id="QQu-bj-e5Y"/>
+                            <constraint firstItem="0Xe-Uy-OYM" firstAttribute="trailing" secondItem="oHu-XV-hwQ" secondAttribute="trailing" id="VNv-6T-bNB"/>
                             <constraint firstItem="gds-gW-B5o" firstAttribute="centerX" secondItem="0Xe-Uy-OYM" secondAttribute="centerX" id="Xc1-sz-cMG"/>
                             <constraint firstItem="gds-gW-B5o" firstAttribute="top" secondItem="0Xe-Uy-OYM" secondAttribute="top" id="akY-su-np6"/>
+                            <constraint firstItem="oHu-XV-hwQ" firstAttribute="top" secondItem="gds-gW-B5o" secondAttribute="bottom" constant="16" id="ayN-Jw-VBy"/>
+                            <constraint firstItem="oHu-XV-hwQ" firstAttribute="leading" secondItem="0Xe-Uy-OYM" secondAttribute="leading" id="blx-1q-vw3"/>
                             <constraint firstItem="gds-gW-B5o" firstAttribute="leading" secondItem="0Xe-Uy-OYM" secondAttribute="leading" id="mDM-Ck-bM5"/>
-                            <constraint firstItem="0Xe-Uy-OYM" firstAttribute="trailing" secondItem="aQd-iT-OCc" secondAttribute="trailing" constant="16" id="vqU-h1-OjE"/>
+                            <constraint firstItem="gds-gW-B5o" firstAttribute="bottom" secondItem="Cpo-yP-X1g" secondAttribute="bottom" constant="16" id="yOe-gV-UwW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="editButton" destination="Cpo-yP-X1g" id="DPq-sk-CdP"/>
                         <outlet property="imageView" destination="gds-gW-B5o" id="akN-6a-nSb"/>
-                        <outlet property="infoStackView" destination="aQd-iT-OCc" id="Bno-q3-Dw1"/>
+                        <outlet property="tableView" destination="oHu-XV-hwQ" id="cMY-Qh-vdM"/>
                         <outlet property="titleLabel" destination="zqN-fH-cbc" id="cSk-CP-2Pu"/>
                     </connections>
                 </viewController>
