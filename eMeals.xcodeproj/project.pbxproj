@@ -18,6 +18,7 @@
 		2D2F20772863C32A00B95A58 /* MealCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F20762863C32A00B95A58 /* MealCollectionCell.m */; };
 		2D329B5A2865DA19005D9EC8 /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D329B592865DA19005D9EC8 /* Dish.m */; };
 		2D586FED2864F23000F09794 /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D586FEC2864F23000F09794 /* Meal.m */; };
+		2DD2BBC72865E297007F1341 /* MealDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD2BBC62865E297007F1341 /* MealDetailViewController.m */; };
 		2DD4C7092864CD84001FD09F /* ImageStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4C7082864CD84001FD09F /* ImageStorageManager.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,8 @@
 		2D329B592865DA19005D9EC8 /* Dish.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dish.m; sourceTree = "<group>"; };
 		2D586FEB2864F23000F09794 /* Meal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
 		2D586FEC2864F23000F09794 /* Meal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Meal.m; sourceTree = "<group>"; };
+		2DD2BBC52865E297007F1341 /* MealDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealDetailViewController.h; sourceTree = "<group>"; };
+		2DD2BBC62865E297007F1341 /* MealDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealDetailViewController.m; sourceTree = "<group>"; };
 		2DD4C7082864CD84001FD09F /* ImageStorageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageStorageManager.m; sourceTree = "<group>"; };
 		2DD4C70A2864CD9E001FD09F /* ImageStorageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageStorageManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +81,7 @@
 				2D2F206F2863C2BC00B95A58 /* AppLifeCycle */,
 				2DD4C7072864CCAE001FD09F /* Helpers */,
 				2D2F207A2863C37300B95A58 /* MealsCollectionView */,
+				2DD2BBC42865E260007F1341 /* MealDetailView */,
 				2D586FEA2864EF3E00F09794 /* Models */,
 				2D2F20782863C34100B95A58 /* Views */,
 				2D2EA8F22863850600A167BA /* Main.storyboard */,
@@ -152,6 +156,15 @@
 				2D329B562865D9CD005D9EC8 /* Meal */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2DD2BBC42865E260007F1341 /* MealDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				2DD2BBC52865E297007F1341 /* MealDetailViewController.h */,
+				2DD2BBC62865E297007F1341 /* MealDetailViewController.m */,
+			);
+			path = MealDetailView;
 			sourceTree = "<group>";
 		};
 		2DD4C7072864CCAE001FD09F /* Helpers */ = {
@@ -233,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD2BBC72865E297007F1341 /* MealDetailViewController.m in Sources */,
 				2D586FED2864F23000F09794 /* Meal.m in Sources */,
 				2D329B5A2865DA19005D9EC8 /* Dish.m in Sources */,
 				2DD4C7092864CD84001FD09F /* ImageStorageManager.m in Sources */,

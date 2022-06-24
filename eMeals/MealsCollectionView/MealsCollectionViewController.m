@@ -9,6 +9,7 @@
 #import "MealCollectionCell.h"
 #import "ImageStorageManager.h"
 #import "Meal.h"
+#import "MealDetailViewController.h"
 
 @interface MealsCollectionViewController ()
 
@@ -173,6 +174,12 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     return 32.0;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    MealDetailViewController * vC = [self.storyboard instantiateViewControllerWithIdentifier:@"detailViewController"];
+    vC.meal = self.meals[indexPath.row];
+    [self.navigationController pushViewController:vC animated:YES];
 }
 
 @end
