@@ -16,6 +16,7 @@
 		2D2EA8FF2863850800A167BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EA8FE2863850800A167BA /* main.m */; };
 		2D2F206C2863894000B95A58 /* MealsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F206B2863894000B95A58 /* MealsCollectionViewController.m */; };
 		2D2F20772863C32A00B95A58 /* MealCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F20762863C32A00B95A58 /* MealCollectionCell.m */; };
+		2D329B5A2865DA19005D9EC8 /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D329B592865DA19005D9EC8 /* Dish.m */; };
 		2D586FED2864F23000F09794 /* Meal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D586FEC2864F23000F09794 /* Meal.m */; };
 		2DD4C7092864CD84001FD09F /* ImageStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4C7082864CD84001FD09F /* ImageStorageManager.m */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,8 @@
 		2D2F206B2863894000B95A58 /* MealsCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealsCollectionViewController.m; sourceTree = "<group>"; };
 		2D2F20752863C32A00B95A58 /* MealCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MealCollectionCell.h; sourceTree = "<group>"; };
 		2D2F20762863C32A00B95A58 /* MealCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MealCollectionCell.m; sourceTree = "<group>"; };
+		2D329B582865DA19005D9EC8 /* Dish.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dish.h; sourceTree = "<group>"; };
+		2D329B592865DA19005D9EC8 /* Dish.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dish.m; sourceTree = "<group>"; };
 		2D586FEB2864F23000F09794 /* Meal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Meal.h; sourceTree = "<group>"; };
 		2D586FEC2864F23000F09794 /* Meal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Meal.m; sourceTree = "<group>"; };
 		2DD4C7082864CD84001FD09F /* ImageStorageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageStorageManager.m; sourceTree = "<group>"; };
@@ -124,11 +127,29 @@
 			path = MealsCollectionView;
 			sourceTree = "<group>";
 		};
-		2D586FEA2864EF3E00F09794 /* Models */ = {
+		2D329B562865D9CD005D9EC8 /* Meal */ = {
 			isa = PBXGroup;
 			children = (
 				2D586FEB2864F23000F09794 /* Meal.h */,
 				2D586FEC2864F23000F09794 /* Meal.m */,
+			);
+			path = Meal;
+			sourceTree = "<group>";
+		};
+		2D329B572865D9D6005D9EC8 /* Dish */ = {
+			isa = PBXGroup;
+			children = (
+				2D329B582865DA19005D9EC8 /* Dish.h */,
+				2D329B592865DA19005D9EC8 /* Dish.m */,
+			);
+			path = Dish;
+			sourceTree = "<group>";
+		};
+		2D586FEA2864EF3E00F09794 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D329B572865D9D6005D9EC8 /* Dish */,
+				2D329B562865D9CD005D9EC8 /* Meal */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D586FED2864F23000F09794 /* Meal.m in Sources */,
+				2D329B5A2865DA19005D9EC8 /* Dish.m in Sources */,
 				2DD4C7092864CD84001FD09F /* ImageStorageManager.m in Sources */,
 				2D2F20772863C32A00B95A58 /* MealCollectionCell.m in Sources */,
 				2D2EA8FF2863850800A167BA /* main.m in Sources */,

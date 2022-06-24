@@ -6,17 +6,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Dish.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Meal : NSObject <NSCoding>
 
-@property (strong, nonatomic) NSString * title;
-@property (strong, nonatomic) NSString * type;
-@property (strong, nonatomic) NSString * imageUrl;
-@property (strong, nonatomic) NSArray<NSString *> * instructions;
-@property (strong, nonatomic) NSArray<NSString *> * ingredients;
-@property (strong, nonatomic) NSData * image;
+@property (strong, nonatomic) Dish * main;
+@property (strong, nonatomic) Dish * side;
 
 - (instancetype) initWithDictionary: (NSDictionary *)dict;
 - (void) encodeWithCoder : (NSCoder *)encode ;

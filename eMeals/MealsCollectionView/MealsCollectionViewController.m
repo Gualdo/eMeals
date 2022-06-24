@@ -50,7 +50,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)updateDefaults {
     NSData * data = [NSKeyedArchiver archivedDataWithRootObject:[self.meals copy]];
-    NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"mealsObject"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
@@ -122,19 +121,19 @@ static NSString * const reuseIdentifier = @"Cell";
     
     Meal * meal = self.meals[indexPath.row];
     
-    cell.titleLabel.text = meal.title;
-    cell.typeLabel.text = meal.type;
+    cell.titleLabel.text = meal.main.title;
+    cell.typeLabel.text = meal.main.type;
     
-    if (meal.image) {
-        cell.imageView.image = [UIImage imageWithData:meal.image];
+    if (meal.main.image) {
+        cell.imageView.image = [UIImage imageWithData:meal.main.image];
         [cell.activityIndicator stopAnimating];
     } else {
-        if (meal.imageUrl)
+        if (meal.main.imageUrl)
         {
-            if ([[ImageStorageManager defaultManager] imageForKey:meal.imageUrl])
+            if ([[ImageStorageManager defaultManager] imageForKey:meal.main.imageUrl])
             {
                 //This condition means the current cell's image has been already downloaded and stored. So set the image to imageview
-                [[cell imageView] setImage:[[ImageStorageManager defaultManager] imageForKey:meal.imageUrl]];
+                [[cell imageView] setImage:[[ImageStorageManager defaultManager] imageForKey:meal.main.imageUrl]];
                 [cell.activityIndicator stopAnimating];
             }
             else
@@ -146,16 +145,16 @@ static NSString * const reuseIdentifier = @"Cell";
                 dispatch_async(queue, ^{
                     
                     //Called Immediately.
-                    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:meal.imageUrl]]];
+                    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:meal.main.imageUrl]]];
                     dispatch_sync(dispatch_get_main_queue(), ^{
                         
                         //Called when the image is downloaded
                         //Store in any external object. So that next time reuse this will not be downloaded
-                        [[ImageStorageManager defaultManager] setImage:image forKey:meal.imageUrl];
+                        [[ImageStorageManager defaultManager] setImage:image forKey:meal.main.imageUrl];
                         //Also set the image to the cell
                         [[cell imageView] setImage:image];
                         NSData * imageData = UIImageJPEGRepresentation(image, 1.0);
-                        self.meals[indexPath.row].image = imageData;
+                        self.meals[indexPath.row].main.image = imageData;
                         [self updateDefaults];
                         [cell.activityIndicator stopAnimating];
                         [cell setNeedsLayout];

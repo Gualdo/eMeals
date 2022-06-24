@@ -1,13 +1,13 @@
 //
-//  Meal.m
+//  Dish.m
 //  eMeals
 //
-//  Created by Eduardo De La Cruz on 23/6/22.
+//  Created by Eduardo De La Cruz on 24/6/22.
 //
 
-#import "Meal.h"
+#import "Dish.h"
 
-@implementation Meal
+@implementation Dish
 
 static NSString * const titleCodingKey = @"title";
 static NSString * const typeCodingKey = @"type";
@@ -18,12 +18,12 @@ static NSString * const instructionsCodingKey = @"instructions";
 
 - (instancetype) initWithDictionary:(NSDictionary *)dict {
     if (self) {
-        NSDictionary * ingredientsDict = [[NSDictionary alloc] initWithDictionary:[[dict objectForKey:@"main"] objectForKey:@"ingredients"]];
-        NSDictionary * instructionsDict = [[NSDictionary alloc] initWithDictionary:[[dict objectForKey:@"main"] objectForKey:@"instructions"]];
+        NSDictionary * ingredientsDict = [[NSDictionary alloc] initWithDictionary:[dict objectForKey:@"ingredients"]];
+        NSDictionary * instructionsDict = [[NSDictionary alloc] initWithDictionary:[dict objectForKey:@"instructions"]];
         NSMutableArray<NSString *> * tempArray = NSMutableArray.new;
-        self.title = [[dict objectForKey:@"main"] objectForKey:@"title"];
-        self.type = [dict objectForKey:@"plan_title_without_size"];
-        self.imageUrl = [[dict objectForKey:@"main"] objectForKey:@"primary_picture_url"];
+        self.title = [dict objectForKey:@"title"];
+        self.type = [dict objectForKey:@"plan_title_without_size"]; // Need to be added
+        self.imageUrl = [dict objectForKey:@"primary_picture_url"];
         
         for (int i = 1; i <= ingredientsDict.count; i++) {
             [tempArray addObject:ingredientsDict[[@(i) stringValue]]];
