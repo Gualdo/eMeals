@@ -22,6 +22,7 @@
 }
 
 - (void)setupView {
+    self.navigationItem.title = @"Meal details";
     self.meal = [self.meals objectAtIndex:self.index.intValue];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
